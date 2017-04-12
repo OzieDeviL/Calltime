@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Wiki.Data.Provider</id>
+    <version>1.0.0</version>
+    <authors>Victor Campos, Gregorio Rojas</authors>
+    <owners>Gregorio Rojas</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>A quick and concise data provider</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>data data-provider</tags>
+  </metadata>
+</package>
