@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiWebStarter.Web", "Web\WikiWebStarter.Web.csproj", "{480102DA-8D85-490A-B953-D53E6F38F449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikiWebStarter.Example", "Example\WikiWebStarter.Example.csproj", "{A39E21B9-125E-452C-B552-0A8C42DC9C58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{480102DA-8D85-490A-B953-D53E6F38F449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480102DA-8D85-490A-B953-D53E6F38F449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480102DA-8D85-490A-B953-D53E6F38F449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480102DA-8D85-490A-B953-D53E6F38F449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A39E21B9-125E-452C-B552-0A8C42DC9C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39E21B9-125E-452C-B552-0A8C42DC9C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39E21B9-125E-452C-B552-0A8C42DC9C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39E21B9-125E-452C-B552-0A8C42DC9C58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://sabiocode.cloudapp.net:8080/tfs/sabiocollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Web\\WikiWebStarter.Web.csproj
+		SccProjectName1 = Web
+		SccLocalPath1 = Web
+		SccProjectUniqueName2 = WikiWebStarter.Example\\WikiWebStarter.Example.csproj
+		SccProjectName2 = WikiWebStarter.Example
+		SccLocalPath2 = WikiWebStarter.Example
+	EndGlobalSection
+EndGlobal
