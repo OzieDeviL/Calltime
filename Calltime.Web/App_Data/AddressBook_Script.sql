@@ -32,7 +32,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 
-CREATE PROCEDURE [dbo].[People_Delete]
+CREATE PROCEDURE [dbo].[People_DeleteById]
 	@Id INTEGER
 AS
 BEGIN
