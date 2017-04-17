@@ -260,4 +260,6 @@ paket-files/
 __pycache__/
 *.pyc
 
-/Calltime.Web/assets
+# Ignore Theme Files
+/Calltime.Web/Theme/
+/Calltime.Web/assets/

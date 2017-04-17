@@ -4,41 +4,265 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="">
+
+    <!-- Web Fonts -->
+    <link rel="shortcut" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=cyrillic,latin">
+
+    @Styles.Render("~/bundles/css")
+    @RenderSection("pageStyles",false)
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body class="header-fixed sliding-panel-ini sliding-panel-flag-right sliding-messengerPanel-flag-left sliding-messengerPanel-ini">
+    <div class="wrapper">
+        <!--=== Header 6===-->
+        <div class="header-v6 header-classic-white header-sticky">
+            <!-- Navbar -->
+            <div class="navbar mega-menu" role="navigation">
+                <div class="container adjustedPositionHeader">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container adjustedPositionHeader">
+                        <button type="button" class="navbar-toggle sliding-panel__btn sliding-panel__btn--dark adjustedPositionRight">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <!-- Navbar Brand -->
+                        <div class="navbar-brand adjustedPositionLeft">
+                            <a href="/">
+                                <img class="default-logo" src="~/assets/img/logos/CalltimeColorClock2Small.png" alt="Logo">
+                                <img class="shrink-logo" src="~/assets/img/logos/CalltimeColorClock2Small.png" alt="Logo">
+                            </a>
+                        </div>
+                        <!-- ENd Navbar Brand -->
+                        <!-- Header Inner Right -->
+                        <div class="header-inner-right">
+                            <ul class="menu-icons-list">
+                                <li class="menu-icons adjustedPositionMenuHeader sliding-messengerPanel__btn sliding-panel__btn--dark">
+                                    <i class="menu-icons-style fa fa-bell-o"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Header Inner Right -->
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+            <!-- End Navbar -->
         </div>
-    </div>
-    <div class="container body-content">
+        <!-- End Header 6 -->
+
+        <!--=== Content Part  ===-->
+        @*<div class="container content">*@
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        @*</div><!--/container-->*@
+            <!--=== End Content Part  ===-->
+
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v6">
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <!-- About Us -->
+                        <div class="col-md-3 sm-margin-bottom-40">
+                            <div class="heading-footer"><h2>About Unify</h2></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit ut metus a commodo. Pellentesque congue tellus sed enim sollicitudin, id blandit mauris eleifend.</p>
+                        </div>
+                        <!-- End About Us -->
+                        <!-- Recent News -->
+                        <div class="col-md-3 sm-margin-bottom-40">
+                            <div class="heading-footer"><h2>Recent News</h2></div>
+                            <ul class="list-unstyled link-news">
+                                <li>
+                                    <a href="#">Apple Conference</a>
+                                    <small>12 July, 2014</small>
+                                </li>
+                                <li>
+                                    <a href="#">Bootstrap Update</a>
+                                    <small>12 July, 2014</small>
+                                </li>
+                                <li>
+                                    <a href="#">Themeforest Templates</a>
+                                    <small>12 July, 2014</small>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Recent News -->
+                        <!-- Useful Links -->
+                        <div class="col-md-3 sm-margin-bottom-40">
+                            <div class="heading-footer"><h2>Useful Links</h2></div>
+                            <ul class="list-unstyled footer-link-list">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Latest jobs</a></li>
+                                <li><a href="#">Community</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Useful Links -->
+                        <!-- Contacts -->
+                        <div class="col-md-3">
+                            <div class="heading-footer"><h2>Contacts</h2></div>
+                            <ul class="list-unstyled contacts">
+                                <li>
+                                    <i class="radius-3x fa fa-map-marker"></i>
+                                    795 Folsom Ave, Suite 600,
+                                    San Francisco, CA 94107
+                                </li>
+                                <li>
+                                    <i class="radius-3x fa fa-phone"></i>
+                                    (+123) 456 7890<br>
+                                    (+123) 456 7891
+                                </li>
+                                <li>
+                                    <i class="radius-3x fa fa-globe"></i>
+                                    <a href="#">toronto@gmail.com</a><br>
+                                    <a href="#">www.toronto.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Contacts -->
+                    </div>
+                </div><!--/container -->
+            </div>
+            <!--/footer-->
+            <!--copyright-->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 sm-margon-bottom-10">
+                            <ul class="list-inline terms-menu">
+                                <li class="silver"> Landing page art by Glenda Ortiz <a href="#"></a></li>
+                                <li><a href="#"></a><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privacy and Policy</a></li>
+                                <li><a href="#">License</a></li>
+                                <li><a href="#">Support</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul class="list-inline dark-social pull-right space-bottom-0">
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Facebook" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Twitter" href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Vine" href="#">
+                                        <i class="fa fa-vine"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Google plus" href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Pinterest" href="#">
+                                        <i class="fa fa-pinterest"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Instagram" href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Tumblr" href="#">
+                                        <i class="fa fa-tumblr"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Youtube" href="#">
+                                        <i class="fa fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-placement="top" data-toggle="tooltip" class="tooltips" data-original-title="Soundcloud" href="#">
+                                        <i class="fa fa-soundcloud"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/copyright-->
+        </div><!--/footer-v1-->
+        <!--=== End Footer Version 1 ===-->
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!--=== Menu Panel ===-->
+    <div class="sliding-panel bg-color-darker">
+        <div class="sliding-panel-inner sliding-panel-scrollable fullscreen">
+            <ul class="sliding-navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page_about3.html">Calls</a></li>
+                <li><a href="page_services.html">Cast & Crew Contacts</a></li>
+                <li><a href="page_about3.html">Productions</a></li>
+                <li><a href="page_profile.html">Account</a></li>
+                <li><a href="blog_large_right_sidebar1.html">Login</a></li>
+                <li><a href="portfolio_3_columns_grid_text.html">Register</a></li>
+                <li><a href="portfolio_3_columns_grid_text.html">About Us</a></li>
+                <li><a href="page_contact1.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <a href="javascript:void(0);" class="sliding-panel__close">Close</a>
+    </div>
+    <!--=== Menu Sliding Panel ===-->
+    
+    <!--=== Messenger Panel ===-->
+    <div class="sliding-messengerPanel bg-color-blue">
+        <div class="sliding-messengerPanel-inner sliding-messengerPanel-scrollable fullscreen">
+            <ul class="sliding-navigation">
+                <li><a href="index.html">Home</a></li>
+
+            </ul>
+
+            <ul class="list-inline social-icons-v1 social-icons-v1--dark">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="sliding-messengerPanel__close">Close</a>
+    </div>
+    <!--=== End Messenger Panel ===-->
+
+    <!-- JS Global -->
+    @Scripts.Render("~/bundles/js/jquery")
+    @Scripts.Render("~/bundles/js/bootstrap")
+
+    <!-- JS Implementing Plugins -->
+    @Scripts.Render("~/bundles/js/globalPlugins")
+    @RenderSection("implementingPlugins", required: false)
+
+    <!-- JS Page Level -->
+    @RenderSection("pageScripts", required: false)
+
+    <!-- JS Initialization -->
+    <script>
+$(document).ready(function() {
+    App.init();
+    App.initParallaxBg();
+    @RenderSection("initialization", required: false)
+});
+    </script>
+
+
+
+
+
 </body>
 </html>
