@@ -212,6 +212,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductionController.cs" />
     <Compile Include="Core\Interfaces\ICacheService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -6349,6 +6350,7 @@
     <Content Include="assets\plugins\wow-animations\LICENSE-MIT" />
     <Content Include="assets\plugins\wow-animations\README.md" />
     <Content Include="Views\Shared\_LayoutUnify.cshtml" />
+    <Content Include="Views\Production\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\ViewModels\" />
