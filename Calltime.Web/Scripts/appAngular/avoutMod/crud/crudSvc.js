@@ -2,11 +2,11 @@
     "use strict";
 
     angular.module("avout")
-        .service("crudService", CrudSvc);
+        .service("crudService", CrudService);
 
-    CrudSvc.$inject = ['$http', '$location', '$httpParamSerializerJQLike'];
+    CrudService.$inject = ['$http', '$location', '$httpParamSerializerJQLike'];
 
-    function CrudSvc($http, $location, $httpParamSerializerJQLike) {
+    function CrudService($http, $location, $httpParamSerializerJQLike) {
         const url = $location.protocol + "://" + $location.host + '/'; 
         return {             
             post: function (data, onSuccess, onError, entity) {

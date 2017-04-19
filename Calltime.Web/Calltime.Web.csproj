@@ -282,6 +282,8 @@
     <Content Include="Scripts\appAngular\avoutMod\crud\crudForm\crudFormDir.js" />
     <Content Include="Scripts\appAngular\avoutMod\crud\crudDir.js" />
     <Content Include="Scripts\appAngular\avoutMod\crud\crudTable\directive.js" />
+    <Content Include="Scripts\appAngular\avoutMod\crud\entityCrudServices\factory.js" />
+    <Content Include="Scripts\appAngular\avoutMod\crud\entityCrudServices\productionSvc.js" />
     <Content Include="Scripts\appAngular\sabioStuff\base.controller.js" />
     <Content Include="Scripts\appAngular\sabioStuff\base.service.js" />
     <Content Include="Scripts\appAngular\sabioStuff\exampleJavascript\example.js" />
