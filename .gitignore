@@ -263,3 +263,4 @@ __pycache__/
 # Ignore Theme Files
 /Calltime.Web/Theme/
 /Calltime.Web/assets/
+/Calltime.Web/assets

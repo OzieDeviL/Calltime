@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="avout">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,9 +61,9 @@
         <!-- End Header 6 -->
 
         <!--=== Content Part  ===-->
-        @*<div class="container content">*@
+        <div class="renderBody">
         @RenderBody()
-        @*</div><!--/container-->*@
+        </div><!--/container-->
             <!--=== End Content Part  ===-->
 
         <!--=== Footer Version 1 ===-->
@@ -251,11 +251,22 @@
     <!-- JS Page Level -->
     @RenderSection("pageScripts", required: false)
 
+    <!-- Angular Global -->
+    @Scripts.Render("~/bundles/js/ang")
+
+    <!-- Angular Page Plugins -->
+    @RenderSection("angPlugins", required: false)
+
+    <!-- Angular Custom -->
+    @Scripts.Render("~/bundles/js/ang/avout")
+    @RenderSection("angPage", required: false)
+
     <!-- JS Initialization -->
     <script>
 $(document).ready(function() {
     App.init();
     App.initParallaxBg();
+    ParallaxSlider.initParallaxSlider();
     @RenderSection("initialization", required: false)
 });
     </script>

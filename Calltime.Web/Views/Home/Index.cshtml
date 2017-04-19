@@ -12,19 +12,18 @@
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="~/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="~/assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
-    <link rel="stylesheet" href="~/assets/plugins/parallax-slider/css/parallax-slider.css" />
     <style>
-        div.promo-key-art-headset {
-            background: url(../assets/img/key-art/headset4.jpg);
-            background-size: cover;
-            background-position: center center;
-        }
-
         /*Containers and container-fluid divs are conflicting, something to do with the margins. This is the hacky solution*/
         .row {
             margin-left: 0px;
             margin-right: 0px;
         }
+
+        /*needed to keep the artwork flush with the header*/
+        div.renderBody{
+            padding-top: 0;
+        }
+
     </style>
 
 }
@@ -335,29 +334,22 @@
 
 @section implementingPlugins{
     <script src="~/assets/js/plugins/owl-carousel.js"></script>
-    <script src="~/assets/plugins/jquery.parallax.js"></script>
     <script src="~/assets/plugins/counter/waypoints.js"></script>
     <script src="~/assets/plugins/counter/jquery.counterup.js"></script>
     <script src="~/assets/plugins/skrollr/skrollr-ini.js"></script>
     <script src="~/assets/plugins/backstretch/backstretch-ini.js"></script>
     <script src="~/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
     <script src="~/assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.js"></script>
-    <script src="~/assets/plugins/parallax-slider/js/modernizr.js"></script>
-    <script src="~/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
 }
 
 @section pageScripts{
     <script src="~/assets/js/plugins/owl-carousel.js"></script>
     <script src="~/assets/js/plugins/cube-portfolio/masonry-v1.js"></script>
-    <script src="~/assets/js/plugins/parallax-slider.js"></script>
-
 }
 
 <script>
     @section initialization{
     App.initCounter();
-
-        ParallaxSlider.initParallaxSlider();
         OwlCarousel.initOwlCarousel();
         console.log("script initialization success");
     }

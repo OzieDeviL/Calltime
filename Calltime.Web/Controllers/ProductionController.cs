@@ -10,6 +10,7 @@ namespace Calltime.Web.Controllers
     public class ProductionController : Controller
     {
         // GET: Production
+        [Route]
         [Route("index")]
         public ActionResult Index()
         {
