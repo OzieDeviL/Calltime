@@ -1,6 +1,5 @@
 ﻿using System;
-
-namespace Calltime.Web.Core.Interfaces
+namespace Calltime.Web.Core
 {
     public interface ICacheService
     {
