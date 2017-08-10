@@ -162,6 +162,9 @@ PublishScripts/
 # NuGet v3's project.json files produces more ignoreable files
 *.nuget.props
 *.nuget.targets
+# runtime scripts added from NuGet -DL
+Scripts
+Scripts/
 
 # Microsoft Azure Build Output
 csx/
@@ -261,6 +264,7 @@ __pycache__/
 *.pyc
 
 # Ignore Theme Files
+/Calltime.Web/Theme
 /Calltime.Web/Theme/
 /Calltime.Web/assets/
 /Calltime.Web/assets
