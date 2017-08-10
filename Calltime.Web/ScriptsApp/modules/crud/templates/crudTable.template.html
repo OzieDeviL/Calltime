@@ -1,0 +1,39 @@
+﻿<div class="crudPage">
+    <div class="row crudTableSearchCreateRow">
+        <!--search-->
+        <div class="col-xs-10">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <!--addEntity-->
+        <div class="col-xs-2">
+            <button class="btn btn-success pull-right" type="button" oz-crud-table-form-toggle>
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary margin-bottom-40 crudTable">
+                <div class="panel-heading crudTableHeadingDark">
+                    <h3 class="panel-title text-capitalize"><i class="fa fa-tasks"></i>{{crudTable.entity}}</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th ng-repeat="key in crudTable.entitySvc.m[crudTable.entity].keys">{{key}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="record in crudTable.entitySvc.m[crudTable.entity].entityList">
+                                <td ng-repeat="key in crudTable.entitySvc.m[crudTable.entity].keys">{{record[key]}}</td>
+                                <td><button class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-pencil"></i>Edit</button><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

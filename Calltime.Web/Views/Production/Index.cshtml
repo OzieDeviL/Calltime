@@ -4,6 +4,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<avout-crud crud-entity="production"></avout-crud>
+<div class="container">
+    <oz-crud-table oz-crud-entity="production"></oz-crud-table>
+</div>
 
-@section angPage{@Scripts.Render("~/bundles/js/ang/crud")}
+@section angPage{
+    @Scripts.Render("~/bundles/js/ng/crud")
+}

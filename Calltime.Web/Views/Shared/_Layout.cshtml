@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="avout">
+<html ng-app="app">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -252,13 +252,13 @@
     @RenderSection("pageScripts", required: false)
 
     <!-- Angular Global -->
-    @Scripts.Render("~/bundles/js/ang")
+    @Scripts.Render("~/bundles/js/ng")
 
     <!-- Angular Page Plugins -->
     @RenderSection("angPlugins", required: false)
 
     <!-- Angular Custom -->
-    @Scripts.Render("~/bundles/js/ang/avout")
+    @Scripts.Render("~/bundles/js/ng/app")
     @RenderSection("angPage", required: false)
 
     <!-- JS Initialization -->

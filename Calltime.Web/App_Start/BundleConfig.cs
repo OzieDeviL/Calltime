@@ -18,8 +18,8 @@ namespace Calltime.Web
 
             //// Use the development version of Modernizr to develop with and learn from. Then, when you're
             //// ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
-            //bundles.Add(new ScriptBundle("~/bundles/js/modernizr").Include(
-            //            "~/Scripts/modernizr-*"));
+            bundles.Add(new ScriptBundle("~/bundles/js/modernizr").Include(
+                        "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/js/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
@@ -51,25 +51,36 @@ namespace Calltime.Web
                  "~/assets/plugins/jquery.parallax.js"
                 ));
 
-            bundles.Add(new ScriptBundle("~/bundles/js/ang").Include(
-                "~/Scripts/angular.js"
-                //"~/Scripts/angular.min.js"
-                //"~/Scripts/angular-animate.js",
-                //"~/Scripts/angular-animate.min.js"
+            bundles.Add(new ScriptBundle("~/bundles/js/ng").Include(
+                "~/Scripts/angular.js",
+                //"~/Scripts/angular.min.js",
+                "~/Scripts/angular-animate.js",
+                "~/Scripts/angular-animate.min.js"
+                //"~/bower_components/angular-formly/dist/formly.js"
+                //"~/bower_components/angular-formly/dist/formly.min.js"
                 ));
 
-            //Avout Angular Module
-            bundles.Add(new ScriptBundle("~/bundles/js/ang/avout").Include(
-                "~/Scripts/appAngular/avoutMod/avoutMod.js"));
+            //Angular App Modules
+            bundles.Add(new ScriptBundle("~/bundles/js/ng/app").Include(
+                "~/ScriptsApp/app.module.js"));
 
-            //CRUDPages
-            bundles.Add(new ScriptBundle("~/bundles/js/ang/crud").Include(
-            "~/Scripts/appAngular/avoutMod/crud/crudDir.js",
-            "~/Scripts/appAngular/avoutMod/crud/crudCtrl.js",
-            "~/Scripts/appAngular/avoutMod/crud/crudForm/crudFormCtrl.js",
-            "~/Scripts/appAngular/avoutMod/crud/crudForm/crudFormDir.js",
-            "~/Scripts/appAngular/avoutMod/crud/crudTable/crudTableCtrl.js",
-            "~/Scripts/appAngular/avoutMod/crud/crudTable/crudTableDir.js"));
+            //Angular CRUD
+            bundles.Add(new ScriptBundle("~/bundles/js/ng/crud").Include(
+            "~/ScriptsApp/*.js",
+            "~/ScriptsApp/modules/*.js",
+            "~/ScriptsApp/modules/crud/*.js",
+            "~/ScriptsApp/modules/crud/controllers/*.js",
+            "~/ScriptsApp/modules/crud/directives/*.js",
+            "~/ScriptsApp/modules/crud/services/*.js",
+            "~/ScriptsApp/modules/crud/templates/*.js"));
+
+            //"~/Scripts/appAngular/appMod/crud/crudDir.js",
+            //"~/Scripts/appAngular/appMod/crud/crudCtrl.js",
+            //"~/Scripts/appAngular/appMod/crud/crudSvc.js",
+            //"~/Scripts/appAngular/appMod/crud/crudForm/crudFormCtrl.js",
+            //"~/Scripts/appAngular/appMod/crud/crudForm/crudFormDir.js",
+            //"~/Scripts/appAngular/appMod/crud/crudTable/crudTableCtrl.js",
+            //"~/Scripts/appAngular/appMod/crud/crudTable/crudTableDir.js"));
         }
     }
 }

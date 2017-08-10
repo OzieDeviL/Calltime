@@ -1,12 +1,12 @@
 ﻿(function () {
     "use strict";
-    angular.module("avout")
-        .controller("crudFormController", CrudFormController);
+    angular.module("app")
+        .controller("crudFormCtrl", CrudFormCtrl);
     //add CRUD Service Dependency
     //add CRUD Model Dependency
-    CrudFormController.$inject = ['$scope'];
+    CrudFormCtrl.$inject = ['$scope'];
 
-    function CrudFormController($scope) {
+    function CrudFormCtrl($scope) {
         var vm = this;
         vm.$scope = $scope;
         vm.crudForm = {};

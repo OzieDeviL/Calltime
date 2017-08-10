@@ -1,4 +1,4 @@
 ﻿(function () {
     "use strict";
-    angular.module("avout", []);
+    angular.module("app", ["oz.crud"]);
 })();

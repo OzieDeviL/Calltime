@@ -11,7 +11,7 @@
 };
 
 oziedevil.moduleOptions = {
-    avout : "avout"
+    app : "app"
         , extraModuleDependencies: []
         , runners: []
         , page: oziedevil.page
@@ -23,5 +23,5 @@ oziedevil.layout.startUp = function () {
     }
 }
 
-oziedevil.avout = "avout";//legacy 
+oziedevil.app = "app";//legacy 
 $(document).ready(oziedevil.layout.startUp);
