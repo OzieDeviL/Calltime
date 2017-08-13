@@ -264,3 +264,7 @@ __pycache__/
 /Calltime.Web/Theme/
 /Calltime.Web/assets/
 /Calltime.Web/assets
+
+# Ignore runtime scripts
+/Calltime.Web/Scripts
+/Calltime.Web/Scripts/
