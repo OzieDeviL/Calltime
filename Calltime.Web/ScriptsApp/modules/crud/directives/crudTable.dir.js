@@ -15,6 +15,7 @@
             }
             , controller: 'crudTableCtrl'
             , controllerAs: 'crudTable'
+            , priority: 100
             //, bindToController: true ///this is making the local properties dissapear from scope but isn't binding them to the controller
             , templateUrl: '/ScriptsApp/modules/crud/templates/crudTable.template.html'
         }

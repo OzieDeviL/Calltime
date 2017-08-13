@@ -262,7 +262,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\AddressBook_Script.sql" />
-    <Content Include="assets\css\custom.css" />
     <Content Include="assets\img\key-art\headset4.jpg" />
     <Content Include="assets\img\logos\CalltimeColorClock2Small.png" />
     <Content Include="assets\plugins\sliding-panel\icon-close-dark.svg" />
@@ -284,13 +283,15 @@
     <Content Include="bower_components\api-check\karma.conf.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\oz.site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="ScriptsApp\appModel.model.js" />
     <Content Include="ScriptsApp\modules\crud\crud.module.js" />
-    <Content Include="ScriptsApp\modules\crud\directives\crudTableFormToggle.dir.js" />
+    <Content Include="ScriptsApp\modules\crud\directives\addCrudForm.dir.js" />
+    <Content Include="ScriptsApp\modules\crud\directives\zzz.crudTableFormToggle.dir.js" />
     <Content Include="ScriptsApp\modules\crud\templates\productionCrudForm.template.html" />
     <Content Include="ScriptsApp\modules\crud\views\production.view.html" />
     <Content Include="ScriptsApp\zzzArchives\boilerplateCode\entity.svc..js" />

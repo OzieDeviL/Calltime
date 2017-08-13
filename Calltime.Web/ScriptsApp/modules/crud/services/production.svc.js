@@ -12,9 +12,6 @@
         svc.entity = 'production';
         svc.m = appModel;
         svc.m.production = {};
-        svc.requestData = {};
-        svc.requestParams = {};
-        svc.id = {};
         //public methods
         svc.post = _post;
         svc.get = _get;
@@ -26,19 +23,19 @@
 
         //-------POST--------//
         function _post(requestData) {
-            crudCalltimeWebApiSvc.post(svc.requestData, svc.entity)
+            crudCalltimeWebApiSvc.post(svc.entity, requestData)
                 .then(_postSuccess, _postError);
         }
-        function _onPostSuccess() {
+        function _postSuccess() {
             console.log("postSuccess");
         }
-        function _onPostSuccess() {
+        function _postError() {
             console.error("postError");
         }
 
         //-------GET--------//
-        function _get(requestData) {
-            crudCalltimeWebApiSvc.get(svc.entity, svc.requestParams)
+        function _get(requestParams) {
+            crudCalltimeWebApiSvc.get(svc.entity, requestParams)
                 .then(_getSuccess, _getError);
         }
         function _getSuccess(response) {
@@ -53,8 +50,8 @@
         }
 
         //-------GETBYID--------//
-        function _getById(requestData) {
-            crudCalltimeWebApiSvc.getById(svc.entity, svc.id, svc.requestParams)
+        function _getById(id, requestParams) {
+            crudCalltimeWebApiSvc.getById(svc.entity, id, requestParams)
                 .then(_getByIdSuccess, _getByIdError);
         }
         function _getByIdSuccess() {
@@ -65,9 +62,9 @@
         }
 
         //-------PUT--------//
-        function _put(requestData) {
-            crudCalltimeWebApiSvc.put(svc.entity, data, svc.id)
-                .then(_getByIdSuccess, _getByIdError);;
+        function _put(requestData, id) {
+            crudCalltimeWebApiSvc.put(svc.entity, requestData, id)
+                .then(_putSuccess, _putError);
         }
         function _putSuccess() {
             console.log(svc.entity + "putSuccess");
@@ -77,15 +74,16 @@
         }
 
         //-------DELETE--------//
-        function _deleteById(requestData) {
-            crudCalltimeWebApiSvc.deleteById(svc.entity, svc.id)
-                .then(_getByIdSuccess, _getByIdError);
+        function _deleteById(id) {
+            crudCalltimeWebApiSvc.deleteById(svc.entity, id)
+                .then(_deleteByIdSuccess, _deleteByIdError);
         }
         function _deleteByIdSuccess() {
             console.log(svc.entity + "deleteByIdSuccess");
         }
-        function _deleteByIdSuccess() {
+        function _deleteByIdError() {
             console.log(svc.entity + "deleteByIdError");
         }       
     }
+
 })();

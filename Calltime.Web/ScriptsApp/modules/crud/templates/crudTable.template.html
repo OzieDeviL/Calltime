@@ -6,29 +6,46 @@
         </div>
         <!--addEntity-->
         <div class="col-xs-2">
-            <button class="btn btn-success pull-right" type="button" oz-crud-table-form-toggle>
+            <button class="btn btn-success pull-right oz-crud-form-post-mode" 
+                    type="button" 
+                    ng-click="crudTable.toggleFormMode($event)">
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
         </div>
     </div>
 
+    <div class="crudFormPlaceholder"></div>
+
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-primary margin-bottom-40 crudTable">
                 <div class="panel-heading crudTableHeadingDark">
-                    <h3 class="panel-title text-capitalize"><i class="fa fa-tasks"></i>{{crudTable.entity}}</h3>
+                    <h3 class="panel-title text-capitalize">
+                        <i class="fa fa-tasks"></i>
+                        <span ng-cloak>{{crudTable.entity}}</span>
+                    </h3>
                 </div>
                 <div class="panel-body">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th ng-repeat="key in crudTable.entitySvc.m[crudTable.entity].keys">{{key}}</th>
+                                <th ng-repeat="key in crudTable.entitySvc.m[crudTable.entity].keys" ng-cloak>{{key}}</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="record in crudTable.entitySvc.m[crudTable.entity].entityList">
-                                <td ng-repeat="key in crudTable.entitySvc.m[crudTable.entity].keys">{{record[key]}}</td>
-                                <td><button class="btn btn-warning btn-xs"><i class="glyphicon glyphicon-pencil"></i>Edit</button><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete</button></td>
+                            <tr ng-repeat="record in crudTable.entitySvc.m[crudTable.entity].entityList" ng-cloak>
+                                <td ng-repeat="key in crudTable.entitySvc.m[crudTable.entity].keys" ng-cloak>{{record[key]}}</td>
+                                <td>
+                                    <button class="btn btn-warning btn-xs oz-crud-form-edit-btn oz-crud-form-edit-mode" 
+                                            ng-click="crudTable.toggleFormMode($event)">
+                                        <i class="glyphicon glyphicon-pencil"></i>
+                                        Edit
+                                    </button>
+                                    <button class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash-o"></i>
+                                        Delete
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

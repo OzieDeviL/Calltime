@@ -27,6 +27,7 @@ namespace Calltime.Web
 
             bundles.Add(new StyleBundle("~/bundles/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/oz.site.css",
                       "~/assets/css/style.css",
                       "~/assets/css/headers/header-v6.css",
                       "~/assets/css/headers/footer-v6.css",
@@ -37,7 +38,8 @@ namespace Calltime.Web
                       "~/assets/css/custom.css",
                       "~/assets/plugins/sliding-panel/style.css",
                       "~/assets/plugins/sliding-panel/styleMessenger.css",
-                      "~/assets/plugins/parallax-slider/css/parallax-slider.css"));
+                      "~/assets/plugins/parallax-slider/css/parallax-slider.css"
+                      ));
            
             //Unify Theme Global JS Implementing Plugins
             bundles.Add(new ScriptBundle("~/bundles/js/globalPlugins").Include(
@@ -73,14 +75,7 @@ namespace Calltime.Web
             "~/ScriptsApp/modules/crud/directives/*.js",
             "~/ScriptsApp/modules/crud/services/*.js",
             "~/ScriptsApp/modules/crud/templates/*.js"));
-
-            //"~/Scripts/appAngular/appMod/crud/crudDir.js",
-            //"~/Scripts/appAngular/appMod/crud/crudCtrl.js",
-            //"~/Scripts/appAngular/appMod/crud/crudSvc.js",
-            //"~/Scripts/appAngular/appMod/crud/crudForm/crudFormCtrl.js",
-            //"~/Scripts/appAngular/appMod/crud/crudForm/crudFormDir.js",
-            //"~/Scripts/appAngular/appMod/crud/crudTable/crudTableCtrl.js",
-            //"~/Scripts/appAngular/appMod/crud/crudTable/crudTableDir.js"));
         }
+
     }
 }

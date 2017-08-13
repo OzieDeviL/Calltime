@@ -1,25 +1,55 @@
 ﻿ <!--crudForm-->
 <div class="row">
     <div class="col-xs-12">        
-        <div class="panel panel-blue margin-bottom-40">
+        <div class="panel panel-primary margin-bottom-40">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-tasks"></i> Basic Form</h3>
+                <h3 class="panel-title">
+                    <i ng-class="crudForm.postEditMode === 'post' ? 'fa-plus' : 'fa-pencil-square-o' "
+                       class="fa fa-pencil-square-o"></i>
+                    <span ng-cloak>{{crudForm.postEditMode === 'post' ? 'New' : 'Edit'}} Production</span>
+                    <!--<i ng-class="crudForm.formVisible ? 'fa-chevron-up' : 'fa-chevron-down'" class="fa pull-right" ng-click="crudForm.formVisible = !crudForm.formVisible"></i>-->
+                </h3>
+                
             </div>
             <div class="panel-body">
                 <form class="margin-bottom-40" role="form">
                     <div class="form-group">
                         <label for="productionName">Production Name</label>
-                        <input type="text" class="form-control" id="productionName" placeholder="Enter the everyday name for the production">
+                        <input ng-model="crudForm.inputs.productionName"
+                               type="text"
+                               class="form-control"
+                               id="productionName"
+                               placeholder="Enter the everyday name for the production">
                     </div>
                     <div class="form-group">
                         <label for="longName">Long Name</label>
-                        <input type="text" class="form-control" id="longName" placeholder="Enter the production's full name">
+                        <input ng-model="crudForm.inputs.longName"
+                               type="text" 
+                               class="form-control" 
+                               id="longName" 
+                               placeholder="Enter the production's full name">
                     </div>
                     <div class="form-group">
                         <label for="codeName">Code Name</label>
-                        <input type="text" class="form-control" id="codeName" placeholder="If you're using a code name during production">
+                        <input ng-model="crudForm.inputs.codeName" 
+                               type="text" 
+                               class="form-control" 
+                               id="codeName" 
+                               placeholder="If you're using a code name during production">
                     </div>
-                    <button type="submit" class="btn-u btn-u-blue">Submit</button>
+                    <input ng-model="crudForm.inputs.id" 
+                           ng-if="crudForm.postEditMode == 'edit'" 
+                           type="number" 
+                           class="form-control oz-hidden-input-field">
+                    <button type="submit" 
+                            class="btn-u btn-u-blue oz-submit" 
+                            ng-click="crudForm.submit()">
+                        Submit
+                    </button>
+                    <button class="btn-u btn-u-blue" 
+                            ng-click="crudForm.togglePostEditMode()">
+                        Toggle Post Edit Mode
+                    </button>
                 </form>
             </div>
         </div>      
